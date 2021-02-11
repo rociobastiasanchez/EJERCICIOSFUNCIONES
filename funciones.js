@@ -162,3 +162,51 @@ words.reduce(function(acumulador1, valorinicial){
     }
 }, '');
 console.log(palabralarga);
+
+//Ejercicio Concatenar métodos (filter y map)
+
+const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+const longmeses = meses.filter(meses => meses.length >7).map (meses => meses.toUpperCase());
+
+console.log(longmeses);
+
+//sin funcion fecha seria asi
+// const filtermeses = meses.filter(funcion(mes){
+//     return meses.length > 7;
+// });
+
+// console.log(filtermeses);
+
+// const mesesmayus = filtermeses.map (function(month){
+//     return month.toLocaleUpperCase();
+// });
+
+// console.log(mesesmayus);
+
+// const concatenacionMet = meses.filter (function(item){
+//     return item.length >7
+// }).map (functio (element){
+//     return element.toUpperCase();
+// });
+// console.log(concatenacionMet);
+
+//Array de objetos
+
+const users = [
+ {username: "ppc90", age: 30, premium: false},
+ {username: "lu65", age: 24, premium: true },
+ {username: "maria3", age: 36, premium: false},
+ {username: "paco12", age: 20, premium: false},
+ {username: "sergio58", age: 26, premium: true},
+];
+
+const older = users.filter (function(user){
+    return user.age > 25;
+});
+
+console.log(older);
+
+// con funcion flecha:
+// const older = users.filter(user=>user.age>25);
+//console.log(older);
+//
